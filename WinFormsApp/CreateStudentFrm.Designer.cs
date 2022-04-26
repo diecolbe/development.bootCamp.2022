@@ -44,11 +44,11 @@
             this.lblBirthday = new System.Windows.Forms.Label();
             this.dateTimeBirthday = new System.Windows.Forms.DateTimePicker();
             this.lblGender = new System.Windows.Forms.Label();
-            this.listBoxGender = new System.Windows.Forms.ListBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbxPC = new System.Windows.Forms.CheckBox();
             this.cbxInternet = new System.Windows.Forms.CheckBox();
+            this.cbxGender = new System.Windows.Forms.ComboBox();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.GridStudents = new System.Windows.Forms.DataGridView();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,11 +84,11 @@
             this.tableLayoutPanel1.Controls.Add(this.lblBirthday, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeBirthday, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblGender, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.listBoxGender, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.cbxPC, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbxInternet, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cbxGender, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
@@ -223,16 +223,6 @@
             this.lblGender.TabIndex = 8;
             this.lblGender.Text = "Genero:";
             // 
-            // listBoxGender
-            // 
-            this.listBoxGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.listBoxGender.FormattingEnabled = true;
-            this.listBoxGender.ItemHeight = 25;
-            this.listBoxGender.Location = new System.Drawing.Point(191, 121);
-            this.listBoxGender.Name = "listBoxGender";
-            this.listBoxGender.Size = new System.Drawing.Size(180, 29);
-            this.listBoxGender.TabIndex = 9;
-            // 
             // lblEmail
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -272,6 +262,15 @@
             this.cbxInternet.TabIndex = 16;
             this.cbxInternet.Text = "¿Internet?";
             this.cbxInternet.UseVisualStyleBackColor = true;
+            // 
+            // cbxGender
+            // 
+            this.cbxGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxGender.FormattingEnabled = true;
+            this.cbxGender.Location = new System.Drawing.Point(191, 119);
+            this.cbxGender.Name = "cbxGender";
+            this.cbxGender.Size = new System.Drawing.Size(182, 33);
+            this.cbxGender.TabIndex = 1;
             // 
             // pnlGrid
             // 
@@ -429,7 +428,6 @@
         private Panel pnlGrid;
         private DataGridView GridStudents;
         private Label lblGender;
-        private ListBox listBoxGender;
         private BindingSource bindingSourceStudents;
         private Button btnRefresh;
         private Label lblEmail;
@@ -444,5 +442,6 @@
         private DataGridViewTextBoxColumn ColumnEmail;
         private DataGridViewTextBoxColumn ColumnPC;
         private DataGridViewTextBoxColumn ColumnInternet;
+        private ComboBox cbxGender;
     }
 }

@@ -32,6 +32,7 @@ namespace WinFormsApp
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
                 {
+                    //Dependency Injections
                     services.AddTransient<CreateStudentFrm>();
                     services.AddTransient<IStudentService, StudentService>();
                     services.AddTransient<IStudentRepository, StudentRepository>();

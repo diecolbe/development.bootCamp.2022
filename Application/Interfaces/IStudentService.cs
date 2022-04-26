@@ -7,6 +7,6 @@ namespace development.Application.Interfaces
         Task SaveStudent(StudentDto studentDto);
         Task<List<StudentDto>> GetStudents();
         bool ExistStudent(int id);
-        int GeMaxId();
+        int GetMaxId();
     }
 }

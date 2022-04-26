@@ -35,10 +35,10 @@ namespace WinFormsApp
 
         private void SaveStudent()
         {
-            var gender = (Gender)listBoxGender.SelectedItem;
+            var gender = (Gender)cbxGender.SelectedItem;
             var student = new StudentDto()
             {
-                IdStudent = studentService.GeMaxId(),
+                IdStudent = studentService.GetMaxId(),
                 Name = txtNames.Text,
                 LastName = txtLastName.Text,
                 Birthday = dateTimeBirthday.Value,
@@ -64,7 +64,7 @@ namespace WinFormsApp
             cbxPC.Checked = false;
             cbxInternet.Checked = false;
             dateTimeBirthday.Value = DateTime.Now;
-            listBoxGender.SelectedItem = " ";
+            cbxGender.SelectedItem = " ";
         }
         private void LoadGrid()
         {
@@ -76,9 +76,11 @@ namespace WinFormsApp
         {
             genders.Add(new Gender() { Id = 1, Description = "F" });
             genders.Add(new Gender() { Id = 2, Description = "M" });
-            listBoxGender.DataSource = genders;
-            listBoxGender.DisplayMember = "Description";
-            listBoxGender.ValueMember = "Id";
+            genders.Add(new Gender() { Id = 3, Description = "-" });
+            cbxGender.DataSource = genders;
+            cbxGender.DisplayMember = "Description";
+            cbxGender.ValueMember = "Id";
+            cbxGender.SelectedText = "-";
         }
     }
 }

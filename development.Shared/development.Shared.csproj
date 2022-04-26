@@ -7,13 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+		<PackageReference Include="MongoDB.Bson" Version="2.15.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\development.Shared\development.Shared.csproj" />
-		<ProjectReference Include="..\Domain\development.Domain.csproj" />
-		<ProjectReference Include="..\Infrastructure\development.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>
